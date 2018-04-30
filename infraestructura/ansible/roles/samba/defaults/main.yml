@@ -46,3 +46,20 @@ samba_users:
 
 delete_user:
   - name: 'uperez'
+
+permisos_cambio:
+ - name: 'respaldos/sistemas'
+   rwx: '775'
+   user: 'ngranados'
+   group: 'sistemas'
+
+ - name: 'Sistemas'
+   rwx: '775'
+   user: 'ngranados'
+   group: 'sistemas'
+
+permisos_backup:
+ - name: 'ven'
+   rwx: '775'
+   user: 'ngranados'
+   group: 'sistemas'

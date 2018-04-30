@@ -39,4 +39,15 @@
   with_items: "{{ delete_user }}"
   tags:
     - delete_user
-    
+
+- name: Cambio de permisos en carpeta 
+  file: dest=/vencom/vencom/{{ item.name }} mode={{ item.rwx }} owner={{ item.user }} group={{ item.group }} state=directory
+  with_items: "{{ permisos_cambio }}"
+  tags:
+    - permisos  
+
+- name: Cambio de permisos en carpeta 
+  file: dest=/vencom/vencom_backup/{{ item.name }} mode={{ item.rwx }} owner={{ item.user }} group={{ item.group }} state=directory
+  with_items: "{{ permisos_backup }}"
+  tags:
+    - permisos_backup 
