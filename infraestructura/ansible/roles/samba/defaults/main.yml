@@ -29,29 +29,88 @@ samba_group:
   - name: 'contadores'
 
 samba_users:
+  - name: 'lcastro'
+    smbpasswd: 'LLcc++11'
+    group: 
+      - 'actuaria'
+  
+  - name: 'egonzalez'
+    smbpasswd: 'EEgg++11'
+    group: 
+      - 'actuaria'
+      
+  - name: 'calvarez'
+    smbpasswd: 'CCaa++11'
+    group: 
+      - 'actuaria'  
+      
+  - name: 'cbarrios'
+    smbpasswd: 'CCbb++11'
+    group: 
+      - 'actuaria' 
+
+  - name: 'maguirre'
+    smbpasswd: 'MMaa++11'
+    group: 
+      - 'actuaria'        
+  
+  - name: 'acruz'
+    smbpasswd: 'CCcc++11'
+    group: 
+      - 'imss'
+
+  - name: 'icorrea'
+    smbpasswd: 'IIcc++11'
+    group: 
+      - 'imss'    
+
+  - name: 'jmagana'
+    smbpasswd: 'JJmm++11'
+    group: 
+      - 'legal'
+
+  - name: 'yfacundo'
+    smbpasswd: 'YYff++11'
+    group: 
+      - 'legal'        
+
   - name: 'ngranados'
     smbpasswd: 'termporal12'
     group: 
       - 'sistemas'
       - 'legal'
+      - 'actuaria'
+      - 'imss'
+
   - name: 'pgomez'
     smbpasswd: 'temporal12'
     group: 
       - 'sistemas'
       - 'previvale'
+
   - name: 'uperez'
     smbpasswd: 'temporal12'
     group:
       - 'sistemas'
 
 delete_user:
-  - name: 'uperez'
+  - name: 'ccruz'
 
 permisos_cambio:
- - name: 'respaldos/sistemas'
+ - name: 'actuaria'
    rwx: '775'
-   user: 'ngranados'
-   group: 'sistemas'
+   user: 'lcastro'
+   group: 'actuaria'
+
+ - name: 'imms'
+   rwx: '775'
+   user: 'acruz'
+   group: 'imss'
+ 
+#  - name: 'legal'
+#    rwx: '775'
+#    user: 'yfacundo'
+#    group: 'legal'
 
  - name: 'Sistemas'
    rwx: '775'
