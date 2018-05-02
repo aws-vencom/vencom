@@ -29,50 +29,69 @@ samba_group:
   - name: 'contadores'
 
 samba_users:
-  - name: 'lcastro'
-    smbpasswd: 'LLcc++11'
-    group: 
-      - 'actuaria'
   
-  - name: 'egonzalez'
-    smbpasswd: 'EEgg++11'
-    group: 
-      - 'actuaria'
-      
-  - name: 'calvarez'
-    smbpasswd: 'CCaa++11'
-    group: 
-      - 'actuaria'  
-      
-  - name: 'cbarrios'
-    smbpasswd: 'CCbb++11'
-    group: 
-      - 'actuaria' 
+  # - name: 'aysla'
+  #   smbpasswd: 'AAyy++11'
+  #   group: 
+  #     - 'admindper'
 
-  - name: 'maguirre'
-    smbpasswd: 'MMaa++11'
-    group: 
-      - 'actuaria'        
+  # - name: 'dtapia'
+  #   smbpasswd: 'DDtt++11'
+  #   group: 
+  #     - 'admindper'    
   
-  - name: 'acruz'
-    smbpasswd: 'CCcc++11'
-    group: 
-      - 'imss'
+  # - name: 'lcastro'
+  #   smbpasswd: 'LLcc++11'
+  #   group: 
+  #     - 'actuaria'
+  
+  # - name: 'egonzalez'
+  #   smbpasswd: 'EEgg++11'
+  #   group: 
+  #     - 'actuaria'
+      
+  # - name: 'calvarez'
+  #   smbpasswd: 'CCaa++11'
+  #   group: 
+  #     - 'actuaria'  
+      
+  # - name: 'cbarrios'
+  #   smbpasswd: 'CCbb++11'
+  #   group: 
+  #     - 'actuaria' 
 
-  - name: 'icorrea'
-    smbpasswd: 'IIcc++11'
-    group: 
-      - 'imss'    
+  # - name: 'maguirre'
+  #   smbpasswd: 'MMaa++11'
+  #   group: 
+  #     - 'actuaria'        
+  
+  # - name: 'acruz'
+  #   smbpasswd: 'CCcc++11'
+  #   group: 
+  #     - 'imss'
 
-  - name: 'jmagana'
-    smbpasswd: 'JJmm++11'
-    group: 
-      - 'legal'
+  # - name: 'icorrea'
+  #   smbpasswd: 'IIcc++11'
+  #   group: 
+  #     - 'imss'    
 
-  - name: 'yfacundo'
-    smbpasswd: 'YYff++11'
-    group: 
-      - 'legal'        
+  # - name: 'jmagana'
+  #   smbpasswd: 'JJmm++11'
+  #   group: 
+  #     - 'legal'
+  #     - 'admindper'
+
+  # - name: 'fjimenez'
+  #   smbpasswd: 'FFjj++11'
+  #   group: 
+  #     - 'legal'
+  #     - 'admindper'
+
+  # - name: 'yfacundo'
+  #   smbpasswd: 'YYff++11'
+  #   group: 
+  #     - 'legal' 
+  #     - 'admindper'       
 
   - name: 'ngranados'
     smbpasswd: 'termporal12'
@@ -81,41 +100,48 @@ samba_users:
       - 'legal'
       - 'actuaria'
       - 'imss'
+      - 'admindper'
 
-  - name: 'pgomez'
-    smbpasswd: 'temporal12'
-    group: 
-      - 'sistemas'
-      - 'previvale'
+  # - name: 'pgomez'
+  #   smbpasswd: 'temporal12'
+  #   group: 
+  #     - 'sistemas'
+  #     - 'previvale'
 
-  - name: 'uperez'
-    smbpasswd: 'temporal12'
-    group:
-      - 'sistemas'
+  # - name: 'uperez'
+  #   smbpasswd: 'temporal12'
+  #   group:
+  #     - 'sistemas'
 
 delete_user:
   - name: 'ccruz'
 
 permisos_cambio:
- - name: 'actuaria'
+ 
+ - name: 'administracion_de_personal'
    rwx: '775'
-   user: 'lcastro'
-   group: 'actuaria'
+   user: 'aysla'
+   group: 'admindper'
+ 
+#  - name: 'actuaria'
+#    rwx: '775'
+#    user: 'lcastro'
+#    group: 'actuaria'
 
- - name: 'imms'
-   rwx: '775'
-   user: 'acruz'
-   group: 'imss'
+#  - name: 'imms'
+#    rwx: '775'
+#    user: 'acruz'
+#    group: 'imss'
  
 #  - name: 'legal'
 #    rwx: '775'
 #    user: 'yfacundo'
 #    group: 'legal'
 
- - name: 'Sistemas'
-   rwx: '775'
-   user: 'ngranados'
-   group: 'sistemas'
+#  - name: 'Sistemas'
+#    rwx: '775'
+#    user: 'ngranados'
+#    group: 'sistemas'
 
 permisos_backup:
  - name: 'ven'
