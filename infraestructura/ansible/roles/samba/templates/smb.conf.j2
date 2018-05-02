@@ -356,258 +356,29 @@ force group = previvale
 #force group = previvale
 
 [sistemas]
-browseable = no
+#browseable = no
 path = /vencom/vencom/respaldos/sistemas/
 write list = @sistemas
 valid users = @sistemas
 force group = sistemas
 
-[Respaldo Online]
+[legal]
 #browseable = no
-path = /vencom/vencom_backup/ven/
-write list = @sistemas
-valid users = @sistemas
-force group = sistemas
+path = /vencom/vencom/legal/
+write list = @legal
+valid users = @legal
+force group = legal
 
-[Actuaria]
+[actuaria]
 #browseable = no
 path = /vencom/vencom/actuaria/
 write list = @actuaria
-valid users = @actuaria,ineri
+valid users = @actuaria
 force group = actuaria
 
-[imssVencom]
-#browseable = no
-path = /vencom/vencom/imssvcm/
-write list = @imss
-valid users = @imss,@contraloria,ccruz
-force group = imss
-
-[Contabilidad Imss]
-path = /vencom/vencom/imssvcm/Contabilidad-IMSS
-write list = @imss
-valid user = @imss, @contraloria,ccruz
-force group = imss
-
-[saps]
-path = /vencom/vencom/saps/
-write list = @actuaria,rroman
-valid users = @actuaria,rroman
-force group = saps
-
-[Tesoreria]
-#browseable = no
-path = /vencom/vencom/tesoreria/
-write list = @tesoreria,teso,nestor
-valid users = @tesoreria,abarradas,nestor,ccruz
-#teso es la pc que no tiene usuario en tesoreria pass=teso01
-force group = tesoreria
-
-[Bancos]
-path = /vencom/vencom/tesoreria/BANCOS/2016/
-valid users =dsandoval
-
-[edo cuentas 2017]
-path = /vencom/vencom/tesoreria/BANCOS/EDOS DE CTA 2017/ANTERIORES/EDO CTA 2017/
-valid users =dsandoval
-
-[validacionDeCosteos]
-#browseable = no
-path = /vencom/vencom/tesoreria/_validacionDeCosteos
-#write list = @nominas
-valid users = @nominas,@ccruz
-force group = nominas
-
-
-[Contraloria]
-browseable = no
-path = /vencom/vencom/contraloria/
-#write list = ccruz
-valid users = ccruz
-#force group = ccruz
-
-[Respaldo Glacier]
-path = /vencom/vencom_glacier/
-write list = @sistemas
-valid users = @sistemas
-
-[BancosTeso]
-#browseable = no
-path = /vencom/vencom/tesoreria/BANCOS
-#write list =
-valid users = ccruz
-#force group =
-
-[Cartera2014Teso]
-browseable = no
-path = /vencom/vencom/tesoreria/CARTERA 2014
-#write list =
-valid users = ccruz
-#force group = ccruz
-
-[FacturacionTeso]
-#browseable = no
-path = /vencom/vencom/tesoreria/FACTURACION
-#write list =
-valid users = ccruz
-#force group = ccruz
-
-[pagosImss]
-#browseable = no
-path = /vencom/vencom/imssvcm/pagosImss
-write list = @imss
-valid users = @nominas,rcperez
-#force group =
-
-[legal]
-#browseable = no
-path = /vencom/vencom/legal
-write list = @legal
-valid users = @legal
-force group =legal
-
-[Nominas]
-#browseable = no
-path = /vencom/vencom/nominas
-write list = @nominas,bgates
-valid users = @nominas,bgates,ccruz
-force group =nominas
-
 [Administracion de Personal]
-browsable = yes
-path = /vencom/vencom/ADMINISTRACION DE PERSONAL/
+#browseable = no
+path = /vencom/vencom/administracion_de_personal/
 write list = @admindper
-valid users = @admindper, @nominas,yfacundo,jmagana,fjimenez
+valid users = @admindper
 force group = admindper
-
-[Vencom]
-#browseable = no
-path = /vencom/vencom/Vencom
-write list = @sistemas
-valid users = @nominas, @imss, @tesoreria,@actuaria, @sistemas, @saps, @contraloria, @previvale, @RH, @map, @jcervantes, @contadores, @legal, @adminper,
-
-[Previvale Conciliacion]
-#browseable = no
-path = /vencom/vencom/previvale/AAA_OPERACIONES/FACTURACION_1/CONCILIACION
-#write list =
-valid users = @tesoreria, @jcervantes, @camtmann, @ccruz, @contadores
-#force group = previvale
-
-[Tesoreria SUA]
-path = /vencom/vencom/tesoreria/SUA
-valid users =  @imss
-
-[Jose Luis Cervantes]
-#browseable = no
-path = /vencom/vencom/JCERVANTES
-write list = @jcervantes
-valid users = @jcervantes
-#force group = no
-
-[Contadores]
-#browseable = no
-path = /vencom/vencom/contabilidad
-write list = @contadores
-valid users = @contadores
-force group = contadores
-
-[Declaraciones_2017]
-path = /vencom/vencom/contabilidad/6. DECLARACIONES/DECLARACIONES 2017/
-valid users = @tesoreria
-
-[Ejercicio]
-path = /vencom/vencom/contabilidad/EJERCICIO 2017/4. PROVISIONALES2017/1. CONTROL IMPUESTOS 2017/
-valid users = @tesoreria
-
-[Dispersion]
-path = /vencom/vencom/tesoreria/DISPERSION/
-#write list =
-valid users = @actuaria
-#force group = actuaria
-
-[Costeos Pagados ATFPL]
-path = /vencom/vencom/tesoreria/_validacionDeCosteos/COSTEOS PAGADOS/2016/ATFPL/
-#write list = @actuaria
-valid users = @actuaria
-#force group = actuaria
-
-[Comprobantes ATFPL]
-path = /vencom/vencom/tesoreria/BANCO COMPROBANTES/2016/ATFPL/
-#write list =
-valid users =@actuaria,ineri,imacias
-#force group = actuaria
-
-[Declaraciones]
-path = /vencom/vencom/contabilidad/DECLARACIONES
-#write list = @nominas
-valid users = @nominas
-
-[Contabilidad RFC]
-path = /vencom/vencom/contabilidad/RFC
-valid users = @legal
-
-[ACTIVE]
-path = /vencom/vencom/previvale/AAA_OPERACIONES/FACTURACION_1/CONCILIACION/ACTIVE
-valid users = kmontiel
-
-[CONCILIACION]
-path = /vencom/vencom/previvale/AAA_OPERACIONES/FACTURACION_1/CONCILIACION
-#write list = kmontiel,ehernandez,mcortes
-valid users = kmontiel,mcortes
-
-[VOORDEEL]
-path = /vencom/vencom/nominas/VENCOM/VOORDEEL
-inherit permissions = yes
-write list = yfacundo,mgsoriano,kzaragoza,@legal
-valid users = yfacundo,mgsoriano,kzaragoza,@legal
-force group = legal
-
-[Legal Becario]
-path = /vencom/vencom/legal/LEGAL BECARIO
-inherit permissions = yes
-write list = @legal,becariorh,becariolegal
-valid users = @legal,becariorh,becariolegal
-
-[KIT CLIENTES]
-path = /vencom/vencom/ADMINISTRACION DE PERSONAL/1.- KIT CLIENTES/
-valid users = jmagana,fjimenez
-write list = jmagana,fjimenez
-
-#[RESPALDO]
-#path = /vencom/vencom/ADMINISTRACION DE PERSONAL/RESPALDO/
-#valid users =
-#write list =
-
-[Relaciones Laborales]
-path = /vencom/vencom/legal/JURIDICO RELACIONES LABORALES/
-valid user = hgomez
-write user = hgomez
-
-[Juridico_Contraloria]
-path = /vencom/vencom/contraloria/JURIDICO-CONTRALORIA/
-valid user =  @legal,kmontiel,mcortes,dsandoval
-write list = @legal,kmontiel,mcortes,dsandoval
-force group = legal
-
-[Inicio de Operaciones]
-path = /vencom/vencom/contabilidad/INICIO DE OPERACIONES/
-valid users = ealvarez,lcastro,rcperez,abarradas,yfacundo,camtmann
-writelist = ealvarez,lcastro,rcperez,abarradas,yfacundo,camtmann
-
-[Contraloria]
-path = /vencom/vencom/contraloria/CONTRALORIA/
-valid users = kmontiel,mcortes,dsandoval
-writelist = kmontiel,mcortes,dsandoval
-
-[Nback]
-path = /vencom/vencom/dnuevo
-valid users = @nominas, @imss, @tesoreria,@actuaria, @sistemas, @saps, @contraloria, @previvale, @RH, @map, @jcervantes, @contadores, @legal, @adminper,
-write user = @sistemas,arodriguez,ngranados,pgomez
-force group = sistemas
-
-
-[Comprobantes de Pago Tes]
-path = /vencom/vencom/tesoreria/BANCOS/PAGOS DE IMPUESTOS 2017/
-#write list =
-valid users =mcortes,dsandoval,arodriguez
-#force group = actuaria

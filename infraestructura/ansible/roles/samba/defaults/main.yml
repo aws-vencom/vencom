@@ -29,34 +29,119 @@ samba_group:
   - name: 'contadores'
 
 samba_users:
+  
+  # - name: 'aysla'
+  #   smbpasswd: 'AAyy++11'
+  #   group: 
+  #     - 'admindper'
+
+  # - name: 'dtapia'
+  #   smbpasswd: 'DDtt++11'
+  #   group: 
+  #     - 'admindper'    
+  
+  # - name: 'lcastro'
+  #   smbpasswd: 'LLcc++11'
+  #   group: 
+  #     - 'actuaria'
+  
+  # - name: 'egonzalez'
+  #   smbpasswd: 'EEgg++11'
+  #   group: 
+  #     - 'actuaria'
+      
+  # - name: 'calvarez'
+  #   smbpasswd: 'CCaa++11'
+  #   group: 
+  #     - 'actuaria'  
+      
+  # - name: 'cbarrios'
+  #   smbpasswd: 'CCbb++11'
+  #   group: 
+  #     - 'actuaria' 
+
+  # - name: 'maguirre'
+  #   smbpasswd: 'MMaa++11'
+  #   group: 
+  #     - 'actuaria'        
+  
+  # - name: 'acruz'
+  #   smbpasswd: 'CCcc++11'
+  #   group: 
+  #     - 'imss'
+
+  # - name: 'icorrea'
+  #   smbpasswd: 'IIcc++11'
+  #   group: 
+  #     - 'imss'    
+
+  # - name: 'jmagana'
+  #   smbpasswd: 'JJmm++11'
+  #   group: 
+  #     - 'legal'
+  #     - 'admindper'
+
+  # - name: 'fjimenez'
+  #   smbpasswd: 'FFjj++11'
+  #   group: 
+  #     - 'legal'
+  #     - 'admindper'
+
+  # - name: 'yfacundo'
+  #   smbpasswd: 'YYff++11'
+  #   group: 
+  #     - 'legal' 
+  #     - 'admindper'       
+
   - name: 'ngranados'
     smbpasswd: 'termporal12'
     group: 
       - 'sistemas'
       - 'legal'
-  - name: 'pgomez'
-    smbpasswd: 'temporal12'
-    group: 
-      - 'sistemas'
-      - 'previvale'
-  - name: 'uperez'
-    smbpasswd: 'temporal12'
-    group:
-      - 'sistemas'
+      - 'actuaria'
+      - 'imss'
+      - 'admindper'
+
+  # - name: 'pgomez'
+  #   smbpasswd: 'temporal12'
+  #   group: 
+  #     - 'sistemas'
+  #     - 'previvale'
+
+  # - name: 'uperez'
+  #   smbpasswd: 'temporal12'
+  #   group:
+  #     - 'sistemas'
 
 delete_user:
-  - name: 'uperez'
+  - name: 'ccruz'
 
 permisos_cambio:
- - name: 'respaldos/sistemas'
+ 
+ - name: 'administracion_de_personal'
    rwx: '775'
-   user: 'ngranados'
-   group: 'sistemas'
+   user: 'aysla'
+   group: 'admindper'
+ 
+#  - name: 'actuaria'
+#    rwx: '775'
+#    user: 'lcastro'
+#    group: 'actuaria'
 
- - name: 'Sistemas'
-   rwx: '775'
-   user: 'ngranados'
-   group: 'sistemas'
+#  - name: 'imms'
+#    rwx: '775'
+#    user: 'acruz'
+#    group: 'imss'
+ 
+#  - name: 'legal'
+#    rwx: '775'
+#    user: 'yfacundo'
+#    group: 'legal'
+
+#  - name: 'Sistemas'
+#    rwx: '775'
+#    user: 'ngranados'
+#    group: 'sistemas'
 
 permisos_backup:
  - name: 'ven'
