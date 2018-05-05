@@ -35,7 +35,9 @@ samba_users:
     group: 
       - 'nominas'
       - 'grupogr'
-
+  
+  #prueba
+  
   # - name: 'rcperez'
   #   smbpasswd: 'RRcc++11'
   #   group: 
