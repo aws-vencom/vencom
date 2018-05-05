@@ -1,0 +1,227 @@
+WRITABLE: yes
+VETO_FILES: /*.rm/*.flv/*.avi/*.qt/*.qtl/*.rpm/*.smk/*.wm/*.wmv/*.wob/*.mp3/*.mp4/*.mid/*.wav/*.wma/*.cda/*.mid/*.ogg/*.ogm/*.aac/*.ac3/*.flc/*.m4a/*.wmdb/*.mov/*.h264/*.mpg*/*.mid/*.xn/*.div/*.bik/*.m1v/*.movi/*.mpa/*.woE
+WORKGROUP: WORKGROUP
+LOG_FILE: var/log/samba/log.%m
+MAX_LOG_SIZE: 1000
+SYSLOG: 0
+PANIC_ACTION: /usr/share/samba/panic-action %d
+ENCRYPT_PASSWORDS: true
+PASSDB_BACKEND: tdbsam
+OBEY_PAM_RESTRICTIONS: yes
+UNIX_PASSWORD_SYNC: yes
+PAM_PASSWORD_CHANGE: yes
+MAP_TO_GUEST: bad user
+USERSHARE_ALLOW_GUESTS: yes
+
+samba_group:
+  - name: 'sistemas'
+  - name: 'legal'
+  - name: 'previvale'
+  - name: 'actuaria'
+  - name: 'imss'
+  - name: 'tesoreria'
+  - name: 'nominas'
+  - name: 'admindper'
+  - name: 'saps'
+  - name: 'contraloria'
+  - name: 'RH'
+  - name: 'map'
+  - name: 'contadores'
+  - name: 'grupogr'
+
+samba_users:
+  - name: 'imacias'
+    smbpasswd: 'IImm++11'
+    group: 
+      - 'nominas'
+      - 'grupogr'
+
+  # - name: 'rcperez'
+  #   smbpasswd: 'RRcc++11'
+  #   group: 
+  #     - 'contadores'
+  #     - 'tesoreria'
+  #     - 'grupogr'
+
+  # - name: 'ctoribio'
+  #   smbpasswd: 'CCtt++11'
+  #   group: 
+  #     - 'tesoreria'
+  #     - 'grupogr'
+
+  # - name: 'ecastellanos'
+  #   smbpasswd: 'EEcc++11'
+  #   group: 
+  #     - 'grupogr'
+
+  # - name: 'kmontiel'
+  #   smbpasswd: 'KKmm++11'
+  #   group: 
+  #     - 'grupogr'
+
+  # - name: 'ealvarez'
+  #   smbpasswd: 'BBrr++11'
+  #   group: 
+  #     - 'grupogr'
+  #     - 'nominas'
+
+  # - name: 'breyes'
+  #   smbpasswd: 'BBrr++11'
+  #   group: 
+  #     - 'contadores'
+
+  # - name: 'amartinez'
+  #   smbpasswd: 'AAmm++11'
+  #   group: 
+  #     - 'contadores'
+      
+  # - name: 'mvazquez'
+  #   smbpasswd: 'MMvv++11'
+  #   group: 
+  #     - 'contadores'    
+  
+  # - name: 'jrendon'
+  #   smbpasswd: 'JJrr++11'
+  #   group: 
+  #     - 'contadores'    
+
+
+
+  # - name: 'becario_admindper'
+  #   smbpasswd: 'BBee++11'
+  #   group: 
+  #     - 'admindper'
+
+  # - name: 'aysla'
+  #   smbpasswd: 'AAyy++11'
+  #   group: 
+  #     - 'admindper'
+
+  # - name: 'dtapia'
+  #   smbpasswd: 'DDtt++11'
+  #   group: 
+  #     - 'admindper'    
+  
+  # - name: 'lcastro'
+  #   smbpasswd: 'LLcc++11'
+  #   group: 
+  #     - 'actuaria'
+  #     - 'grupogr'
+  
+  # - name: 'egonzalez'
+  #   smbpasswd: 'EEgg++11'
+  #   group: 
+  #     - 'actuaria'
+      
+  # - name: 'calvarez'
+  #   smbpasswd: 'CCaa++11'
+  #   group: 
+  #     - 'actuaria'  
+      
+  # - name: 'cbarrios'
+  #   smbpasswd: 'CCbb++11'
+  #   group: 
+  #     - 'actuaria' 
+
+  # - name: 'maguirre'
+  #   smbpasswd: 'MMaa++11'
+  #   group: 
+  #     - 'actuaria'        
+  
+  # - name: 'acruz'
+  #   smbpasswd: 'AAcc++11'
+  #   group: 
+  #     - 'imss'
+  #     - 'grupogr'
+
+  # - name: 'icorrea'
+  #   smbpasswd: 'IIcc++11'
+  #   group: 
+  #     - 'imss'    
+
+  # - name: 'jmagana'
+  #   smbpasswd: 'JJmm++11'
+  #   group: 
+  #     - 'legal'
+  #     - 'admindper'
+
+  # - name: 'fjimenez'
+  #   smbpasswd: 'FFjj++11'
+  #   group: 
+  #     - 'legal'
+  #     - 'admindper'
+
+  # - name: 'yfacundo'
+  #   smbpasswd: 'YYff++11'
+  #   group: 
+  #     - 'legal' 
+  #     - 'admindper' 
+  #     - 'grupogr'      
+
+  - name: 'ngranados'
+    smbpasswd: 'termporal12'
+    group: 
+      - 'sistemas'
+      - 'legal'
+      - 'actuaria'
+      - 'imss'
+      - 'admindper'
+      - 'contadores'
+      - 'grupogr'
+
+  - name: 'pgomez'
+    smbpasswd: 'temporal122'
+    group: 
+      - 'sistemas'
+      - 'previvale'
+
+  # - name: 'uperez'
+  #   smbpasswd: 'temporal12'
+  #   group:
+  #     - 'sistemas'
+
+delete_user:
+  - name: 'ccruz'
+
+permisos_cambio:
+ 
+ - name: 'grupogr'
+   rwx: '775'
+   user: 'yfacundo'
+   group: 'grupogr'
+
+#  - name: 'contabilidad'
+#    rwx: '775'
+#    user: 'amartinez'
+#    group: 'contadores'
+
+#  - name: 'administracion_de_personal'
+#    rwx: '775'
+#    user: 'aysla'
+#    group: 'admindper'
+ 
+#  - name: 'actuaria'
+#    rwx: '775'
+#    user: 'lcastro'
+#    group: 'actuaria'
+
+#  - name: 'imms'
+#    rwx: '775'
+#    user: 'acruz'
+#    group: 'imss'
+ 
+#  - name: 'legal'
+#    rwx: '775'
+#    user: 'yfacundo'
+#    group: 'legal'
+
+#  - name: 'Sistemas'
+#    rwx: '775'
+#    user: 'ngranados'
+#    group: 'sistemas'
+
+permisos_backup:
+ - name: 'ven'
+   rwx: '775'
+   user: 'ngranados'
+   group: 'sistemas'
