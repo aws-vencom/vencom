@@ -28,13 +28,52 @@ samba_group:
   - name: 'map'
   - name: 'contadores'
   - name: 'grupogr'
+  - name: 'humansite'
+  - name: 'auditoria_previvale'
 
 samba_users:
-  - name: 'imacias'
-    smbpasswd: 'IImm++11'
+  
+  - name: 'evelasco'
+    smbpasswd: 'EEvv++11'
     group: 
-      - 'nominas'
-      - 'grupogr'
+      - 'auditoria_previvale'
+      - 'previvale'
+   
+  - name: 'kmontiel'
+    smbpasswd: 'KKmm++11'
+    group: 
+      - 'auditoria_previvale'
+      - 'contraloria'
+      
+  - name: 'mcortes'
+    smbpasswd: 'MMcc++11'
+    group: 
+      - 'auditoria_previvale'
+      - 'contraloria'
+
+  # - name: 'inery'
+  #   smbpasswd: 'IInn++11'
+  #   group: 
+  #     - 'humansite'
+
+#Eloy Bravo
+  # - name: 'ebravo' 
+  #   smbpasswd: 'EvEv**00'
+  #   group: 
+  #     - 'humansite'
+   
+#Brenda Lucero Garcia Garcia
+  # - name: 'bgarcia' 
+  #   smbpasswd: 'BBgg+1*1'
+  #   group: 
+  #     - 'humansite'	  
+  
+
+  #- name: 'imacias'
+  # smbpasswd: 'IImm++11'
+  #  group: 
+  #    - 'nominas'
+  #    - 'grupogr'
   
   #prueba
   
@@ -170,12 +209,14 @@ samba_users:
       - 'admindper'
       - 'contadores'
       - 'grupogr'
+      - 'humansite'
+      - 'auditoria_previvale'
 
-  - name: 'pgomez'
-    smbpasswd: 'temporal122'
-    group: 
-      - 'sistemas'
-      - 'previvale'
+  # - name: 'pgomez'
+  #   smbpasswd: 'temporal122'
+  #   group: 
+  #     - 'sistemas'
+  #     - 'previvale'
 
   # - name: 'uperez'
   #   smbpasswd: 'temporal12'
@@ -183,14 +224,20 @@ samba_users:
   #     - 'sistemas'
 
 delete_user:
-  - name: 'ccruz'
+  - name: 'mcortez'
+
 
 permisos_cambio:
  
- - name: 'grupogr'
-   rwx: '775'
-   user: 'yfacundo'
-   group: 'grupogr'
+  - name: 'auditoria_previvale'
+    rwx: '775'
+    user: 'ngranados'
+    group: 'auditoria_previvale'
+ 
+# - name: 'grupogr'
+#   rwx: '775'
+#   user: 'yfacundo'
+#   group: 'grupogr'
 
 #  - name: 'contabilidad'
 #    rwx: '775'
@@ -227,3 +274,4 @@ permisos_backup:
    rwx: '775'
    user: 'ngranados'
    group: 'sistemas'
+#comentario
